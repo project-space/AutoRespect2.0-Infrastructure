@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Consul" Version="0.7.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AutoRespect.Infrastructure.DI.Design\AutoRespect.Infrastructure.DI.Design.csproj" />
+    <ProjectReference Include="..\AutoRespect.Infrastructure.ServiceDiscovery.Design\AutoRespect.Infrastructure.ServiceDiscovery.Design.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -23,9 +23,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRespect.Infrastructure.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data-access", "data-access", "{73F14885-147F-4D9C-B14D-6A31EEC53DC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoRespect.Infrastructure.DataAccess", "src\AutoRespect.Infrastructure.DataAccess\AutoRespect.Infrastructure.DataAccess.csproj", "{70450475-56F8-471D-8D4E-2FFD540B1DFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRespect.Infrastructure.DataAccess", "src\AutoRespect.Infrastructure.DataAccess\AutoRespect.Infrastructure.DataAccess.csproj", "{70450475-56F8-471D-8D4E-2FFD540B1DFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoRespect.Infrastructure.DataAccess.Design", "src\AutoRespect.Infrastructure.DataAccess.Design\AutoRespect.Infrastructure.DataAccess.Design.csproj", "{2C27C709-907A-4F3A-8525-47347946C101}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRespect.Infrastructure.DataAccess.Design", "src\AutoRespect.Infrastructure.DataAccess.Design\AutoRespect.Infrastructure.DataAccess.Design.csproj", "{2C27C709-907A-4F3A-8525-47347946C101}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "service-discovery", "service-discovery", "{1FF66289-CBBB-4275-8481-B51A39175C71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoRespect.Infrastructure.ServiceDiscovery.Design", "src\AutoRespect.Infrastructure.ServiceDiscovery.Design\AutoRespect.Infrastructure.ServiceDiscovery.Design.csproj", "{E1CACE3D-CE36-4F97-A271-6ADCE60D6C90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoRespect.Infrastructure.ServiceDiscovery", "src\AutoRespect.Infrastructure.ServiceDiscovery\AutoRespect.Infrastructure.ServiceDiscovery.csproj", "{E8F1FF92-594B-47E9-8C3C-33FDBE620430}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +67,14 @@ Global
 		{2C27C709-907A-4F3A-8525-47347946C101}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C27C709-907A-4F3A-8525-47347946C101}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C27C709-907A-4F3A-8525-47347946C101}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1CACE3D-CE36-4F97-A271-6ADCE60D6C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1CACE3D-CE36-4F97-A271-6ADCE60D6C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1CACE3D-CE36-4F97-A271-6ADCE60D6C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1CACE3D-CE36-4F97-A271-6ADCE60D6C90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8F1FF92-594B-47E9-8C3C-33FDBE620430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8F1FF92-594B-47E9-8C3C-33FDBE620430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8F1FF92-594B-47E9-8C3C-33FDBE620430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8F1FF92-594B-47E9-8C3C-33FDBE620430}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +91,9 @@ Global
 		{73F14885-147F-4D9C-B14D-6A31EEC53DC1} = {BED00B05-8349-44B5-A57C-E2969980B17E}
 		{70450475-56F8-471D-8D4E-2FFD540B1DFB} = {73F14885-147F-4D9C-B14D-6A31EEC53DC1}
 		{2C27C709-907A-4F3A-8525-47347946C101} = {73F14885-147F-4D9C-B14D-6A31EEC53DC1}
+		{1FF66289-CBBB-4275-8481-B51A39175C71} = {BED00B05-8349-44B5-A57C-E2969980B17E}
+		{E1CACE3D-CE36-4F97-A271-6ADCE60D6C90} = {1FF66289-CBBB-4275-8481-B51A39175C71}
+		{E8F1FF92-594B-47E9-8C3C-33FDBE620430} = {1FF66289-CBBB-4275-8481-B51A39175C71}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C36940F5-EDA8-4E02-A2C7-E638CB377922}

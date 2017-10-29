@@ -8,7 +8,7 @@ namespace AutoRespect.Infrastructure.DataAccess
     [DI(LifeCycleType.Singleton)]
     public class IdentityServerDb : Db, IIdentityServerDb
     {
-        public IdentityServerDb(IDbConnectinStringGetter connectinStringGetter)
+        public IdentityServerDb(IDbConnectionStringGetter connectinStringGetter)
             : base (connectinStringGetter.Get(DbType.IdentityServer).Result)
         {            
         }

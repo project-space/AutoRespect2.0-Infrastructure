@@ -2,7 +2,7 @@
 
 namespace AutoRespect.Infrastructure.ServiceDiscovery.Design.Db
 {
-    public interface IDbConnectinStringGetter
+    public interface IDbConnectionStringGetter
     {
         Task<string> Get(DbType db);
     }

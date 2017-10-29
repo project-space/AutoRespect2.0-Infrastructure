@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Text;
 using System.Threading.Tasks;
 using AutoRespect.Infrastructure.DI.Design;
 using AutoRespect.Infrastructure.DI.Design.Attributes;
@@ -22,7 +23,7 @@ namespace AutoRespect.Infrastructure.ServiceDiscovery.Db
             var r = await _consulClient.KV.Get(key);
             if (r.StatusCode == HttpStatusCode.OK)
             {
-                return Convert.ToString(r.Response.Value);
+                return Encoding.UTF8.GetString(r.Response.Value);
             }
             else
             {

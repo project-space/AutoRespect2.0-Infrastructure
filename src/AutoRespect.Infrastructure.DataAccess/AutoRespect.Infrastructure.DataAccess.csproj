@@ -12,6 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AutoRespect.Infrastructure.DataAccess.Design\AutoRespect.Infrastructure.DataAccess.Design.csproj" />
     <ProjectReference Include="..\AutoRespect.Infrastructure.DI.Design\AutoRespect.Infrastructure.DI.Design.csproj" />
+    <ProjectReference Include="..\AutoRespect.Infrastructure.ServiceDiscovery.Design\AutoRespect.Infrastructure.ServiceDiscovery.Design.csproj" />
   </ItemGroup>
 
 </Project>

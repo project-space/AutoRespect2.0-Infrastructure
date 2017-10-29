@@ -2,12 +2,12 @@
 {
     public class Error
     {
-        public int Code { get; set; }
+        public string Id { get; set; }
         public string Description { get; set; }
 
-        public Error (int code, string description)
+        public Error (string id, string description)
         {
-            Code = code;
+            Id = id;
             Description = description;
         }
     }

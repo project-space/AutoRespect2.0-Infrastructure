@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>AutoRespect.Infrastructure.DI</AssemblyName>
+    <RootNamespace>AutoRespect.Infrastructure.DI</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StructureMap.Microsoft.DependencyInjection" Version="1.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AutoRespect.Infrastructure.DI.Design\AutoRespect.Infrastructure.DI.Design.csproj" />
+  </ItemGroup>
+
+</Project>

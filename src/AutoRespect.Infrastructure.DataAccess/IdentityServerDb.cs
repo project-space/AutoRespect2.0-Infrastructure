@@ -5,7 +5,7 @@ using AutoRespect.Infrastructure.ServiceDiscovery.Design.Db;
 
 namespace AutoRespect.Infrastructure.DataAccess
 {
-    [DI(LifeCycleType.Singleton)]
+    [DI(LifeCycle.Singleton)]
     public class IdentityServerDb : Db, IIdentityServerDb
     {
         public IdentityServerDb(IDbConnectionStringGetter connectinStringGetter)

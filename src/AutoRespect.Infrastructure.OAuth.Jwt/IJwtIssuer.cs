@@ -14,7 +14,7 @@ namespace AutoRespect.Infrastructure.OAuth.Jwt
         Result<string> Release(JwtPayload payload);
     }
 
-    [DI(LifeCycleType.Singleton)]
+    [DI(LifeCycle.Singleton)]
     public class JwtIssuer : IJwtIssuer
     {
         public Result<string> Release(JwtPayload payload)

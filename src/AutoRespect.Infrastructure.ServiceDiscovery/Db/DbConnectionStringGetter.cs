@@ -9,7 +9,7 @@ using Consul;
 
 namespace AutoRespect.Infrastructure.ServiceDiscovery.Db
 {
-    [DI(LifeCycleType.Singleton)]
+    [DI(LifeCycle.Singleton)]
     public class DbConnectionStringGetter : IDbConnectionStringGetter
     {
         private static readonly ConsulClient _consulClient = new ConsulClient((config) =>

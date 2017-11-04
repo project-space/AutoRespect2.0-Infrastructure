@@ -30,19 +30,19 @@ namespace AutoRespect.Infrastructure.DI
                 registry
                     .For(contract)
                     .Add(type)
-                    .SetLifecycleTo(GetLifecycleByDIAttribute(diAttribute));
+                    .SetLifecycleTo(GetLifeCycleByDIAttribute(diAttribute));
             }
         }
 
-        private LifecycleBase GetLifecycleByDIAttribute (DIAttribute attribute)
+        private LifecycleBase GetLifeCycleByDIAttribute (DIAttribute attribute)
         {
-            switch (attribute.lifeCycle)
+            switch (attribute.LifeCycle)
             {
-                case LifeCycleType.Singleton:
+                case LifeCycle.Singleton:
                     return new SingletonLifecycle();
-                case LifeCycleType.Scope:
+                case LifeCycle.Scope:
                     return new UniquePerRequestLifecycle();
-                case LifeCycleType.Transient:
+                case LifeCycle.Transient:
                     return new TransientLifecycle();
                 default:
                     throw new Exception("UNSUPPORTED LIFECYCLE TYPE");

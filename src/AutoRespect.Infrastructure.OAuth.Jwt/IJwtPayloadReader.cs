@@ -11,7 +11,7 @@ namespace AutoRespect.Infrastructure.OAuth.Jwt
         Result<JwtPayload> Read(string token);
     }
 
-    [DI(LifeCycleType.Singleton)]
+    [DI(LifeCycle.Singleton)]
     public class JwtPayloadReader : IJwtPayloadReader
     {
         public Result<JwtPayload> Read(string token)

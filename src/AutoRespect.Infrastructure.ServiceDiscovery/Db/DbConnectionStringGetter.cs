@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 using AutoRespect.Infrastructure.DI.Design;
 using AutoRespect.Infrastructure.DI.Design.Attributes;
@@ -19,26 +19,28 @@ namespace AutoRespect.Infrastructure.ServiceDiscovery.Db
 
         public async Task<string> Get(DbType db)
         {
-            var key = $"db/{DbTypeToKey(db)}/config/connection";
-            var r = await _consulClient.KV.Get(key);
-            if (r.StatusCode == HttpStatusCode.OK)
+            var serviceName = DbTypeToServiceName(db);
+            var services = await _consulClient.Catalog.Service(serviceName);
+
+            if (services.StatusCode == HttpStatusCode.OK)
             {
-                return Encoding.UTF8.GetString(r.Response.Value);
+                if (services.Response.Length > 0)
+                {
+                    return services.Response.First().ServiceAddress;
+                }
             }
-            else
-            {
-                throw new Exception($"CANNOT GET RESPONSE FOR KEY [{key}]");
-            }
+
+            throw new Exception($"Сould not get connection string to [{serviceName}]");
         }
 
-        private string DbTypeToKey(DbType db)
+        private string DbTypeToServiceName(DbType db)
         {
             switch (db)
             {
                 case DbType.IdentityServer:
-                    return "identity-server";
+                    return "db-identity-server";
                 case DbType.ResourceServer:
-                    return "resource-server";
+                    return "db-resource-server";
                 default:
                     throw new Exception("UNSUPPORTED DBTYPE");
             }

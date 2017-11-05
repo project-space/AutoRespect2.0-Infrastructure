@@ -4,20 +4,20 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using AutoRespect.Infrastructure.DI.Design;
 using AutoRespect.Infrastructure.DI.Design.Attributes;
-using AutoRespect.Infrastructure.ErrorHandling;
+using AutoRespect.Shared.Errors.Design;
 using Microsoft.IdentityModel.Tokens;
 
 namespace AutoRespect.Infrastructure.OAuth.Jwt
 {
     public interface IJwtIssuer
     {
-        Result<string> Release(JwtPayload payload);
+        R<string> Release(JwtPayload payload);
     }
 
     [DI(LifeCycle.Singleton)]
     public class JwtIssuer : IJwtIssuer
     {
-        public Result<string> Release(JwtPayload payload)
+        public R<string> Release(JwtPayload payload)
         {
             var identity = CreateClaims(payload);
 

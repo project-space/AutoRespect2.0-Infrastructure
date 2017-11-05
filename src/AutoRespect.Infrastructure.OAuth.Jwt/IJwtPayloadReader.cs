@@ -1,20 +1,20 @@
-﻿using AutoRespect.Infrastructure.ErrorHandling;
-using System;
+﻿using System;
 using System.IdentityModel.Tokens.Jwt;
-using AutoRespect.Infrastructure.DI.Design.Attributes;
 using AutoRespect.Infrastructure.DI.Design;
+using AutoRespect.Infrastructure.DI.Design.Attributes;
+using AutoRespect.Shared.Errors.Design;
 
 namespace AutoRespect.Infrastructure.OAuth.Jwt
 {
     public interface IJwtPayloadReader
     {
-        Result<JwtPayload> Read(string token);
+        R<JwtPayload> Read(string token);
     }
 
     [DI(LifeCycle.Singleton)]
     public class JwtPayloadReader : IJwtPayloadReader
     {
-        public Result<JwtPayload> Read(string token)
+        public R<JwtPayload> Read(string token)
         {
             var payload = new JwtSecurityTokenHandler()
                 .ReadJwtToken(token);

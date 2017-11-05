@@ -5,13 +5,7 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BED00B05-8349-44B5-A57C-E2969980B17E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRespect.Infrastructure.ErrorHandling", "src\AutoRespect.Infrastructure.ErrorHandling\AutoRespect.Infrastructure.ErrorHandling.csproj", "{8AF8909B-D583-48C7-9817-C94E0C6F25A6}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRespect.Infrastructure.ErrorHandling.AspNetCore", "src\AutoRespect.Infrastructure.ErrorHandling.AspNetCore\AutoRespect.Infrastructure.ErrorHandling.AspNetCore.csproj", "{32D6EB98-D70F-4626-A6AD-47B38DE0643C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "oauth", "oauth", "{DF83A591-438F-4076-8710-5292E67DE3AA}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "error-handling", "error-handling", "{35BE426D-D132-4556-BFEE-9F3D73AFDBC3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRespect.Infrastructure.OAuth.Jwt", "src\AutoRespect.Infrastructure.OAuth.Jwt\AutoRespect.Infrastructure.OAuth.Jwt.csproj", "{C01A5C18-B731-4B39-968D-C4FA003F0910}"
 EndProject
@@ -29,9 +23,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRespect.Infrastructure.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "service-discovery", "service-discovery", "{1FF66289-CBBB-4275-8481-B51A39175C71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoRespect.Infrastructure.ServiceDiscovery.Design", "src\AutoRespect.Infrastructure.ServiceDiscovery.Design\AutoRespect.Infrastructure.ServiceDiscovery.Design.csproj", "{E1CACE3D-CE36-4F97-A271-6ADCE60D6C90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRespect.Infrastructure.ServiceDiscovery.Design", "src\AutoRespect.Infrastructure.ServiceDiscovery.Design\AutoRespect.Infrastructure.ServiceDiscovery.Design.csproj", "{E1CACE3D-CE36-4F97-A271-6ADCE60D6C90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoRespect.Infrastructure.ServiceDiscovery", "src\AutoRespect.Infrastructure.ServiceDiscovery\AutoRespect.Infrastructure.ServiceDiscovery.csproj", "{E8F1FF92-594B-47E9-8C3C-33FDBE620430}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRespect.Infrastructure.ServiceDiscovery", "src\AutoRespect.Infrastructure.ServiceDiscovery\AutoRespect.Infrastructure.ServiceDiscovery.csproj", "{E8F1FF92-594B-47E9-8C3C-33FDBE620430}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data-transfer", "data-transfer", "{C5C9A8FF-8105-4E52-858E-0A38D70E3E06}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRespect.Infrastructure.Api.Design", "src\AutoRespect.Infrastructure.Api.Design\AutoRespect.Infrastructure.Api.Design.csproj", "{03988845-F2E7-45EF-B3ED-3C3AAA8AFFFD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRespect.Infrastructure.Api", "src\AutoRespect.Infrastructure.Api\AutoRespect.Infrastructure.Api.csproj", "{1464414A-5FE3-4892-A75D-38A1E0D97EFA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{2D7D8864-DCC3-428B-9225-B011D7261414}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{9CB9621F-9187-4AC8-9A30-2BAC33FE3575}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRespect.Shared.Errors", "submodules\AutoRespect2.0-Shared\src\AutoRespect.Shared.Errors\AutoRespect.Shared.Errors.csproj", "{500CF3FC-7B06-4FD5-B201-92D9CB76D5A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRespect.Shared.Errors.Design", "submodules\AutoRespect2.0-Shared\src\AutoRespect.Shared.Errors.Design\AutoRespect.Shared.Errors.Design.csproj", "{299E7AE8-3210-4762-84B5-3A4689ABEF8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,14 +47,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8AF8909B-D583-48C7-9817-C94E0C6F25A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8AF8909B-D583-48C7-9817-C94E0C6F25A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8AF8909B-D583-48C7-9817-C94E0C6F25A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8AF8909B-D583-48C7-9817-C94E0C6F25A6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{32D6EB98-D70F-4626-A6AD-47B38DE0643C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{32D6EB98-D70F-4626-A6AD-47B38DE0643C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{32D6EB98-D70F-4626-A6AD-47B38DE0643C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{32D6EB98-D70F-4626-A6AD-47B38DE0643C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C01A5C18-B731-4B39-968D-C4FA003F0910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C01A5C18-B731-4B39-968D-C4FA003F0910}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C01A5C18-B731-4B39-968D-C4FA003F0910}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -75,15 +75,28 @@ Global
 		{E8F1FF92-594B-47E9-8C3C-33FDBE620430}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8F1FF92-594B-47E9-8C3C-33FDBE620430}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8F1FF92-594B-47E9-8C3C-33FDBE620430}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03988845-F2E7-45EF-B3ED-3C3AAA8AFFFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03988845-F2E7-45EF-B3ED-3C3AAA8AFFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03988845-F2E7-45EF-B3ED-3C3AAA8AFFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03988845-F2E7-45EF-B3ED-3C3AAA8AFFFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1464414A-5FE3-4892-A75D-38A1E0D97EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1464414A-5FE3-4892-A75D-38A1E0D97EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1464414A-5FE3-4892-A75D-38A1E0D97EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1464414A-5FE3-4892-A75D-38A1E0D97EFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{500CF3FC-7B06-4FD5-B201-92D9CB76D5A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{500CF3FC-7B06-4FD5-B201-92D9CB76D5A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{500CF3FC-7B06-4FD5-B201-92D9CB76D5A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{500CF3FC-7B06-4FD5-B201-92D9CB76D5A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{299E7AE8-3210-4762-84B5-3A4689ABEF8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{299E7AE8-3210-4762-84B5-3A4689ABEF8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{299E7AE8-3210-4762-84B5-3A4689ABEF8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{299E7AE8-3210-4762-84B5-3A4689ABEF8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{8AF8909B-D583-48C7-9817-C94E0C6F25A6} = {35BE426D-D132-4556-BFEE-9F3D73AFDBC3}
-		{32D6EB98-D70F-4626-A6AD-47B38DE0643C} = {35BE426D-D132-4556-BFEE-9F3D73AFDBC3}
 		{DF83A591-438F-4076-8710-5292E67DE3AA} = {BED00B05-8349-44B5-A57C-E2969980B17E}
-		{35BE426D-D132-4556-BFEE-9F3D73AFDBC3} = {BED00B05-8349-44B5-A57C-E2969980B17E}
 		{C01A5C18-B731-4B39-968D-C4FA003F0910} = {DF83A591-438F-4076-8710-5292E67DE3AA}
 		{1D9D0343-9929-49A7-A1FA-9E1EAB1D70BE} = {BED00B05-8349-44B5-A57C-E2969980B17E}
 		{92DC45D9-3B08-44E1-A7EF-FFB6D16DB0A8} = {1D9D0343-9929-49A7-A1FA-9E1EAB1D70BE}
@@ -94,6 +107,12 @@ Global
 		{1FF66289-CBBB-4275-8481-B51A39175C71} = {BED00B05-8349-44B5-A57C-E2969980B17E}
 		{E1CACE3D-CE36-4F97-A271-6ADCE60D6C90} = {1FF66289-CBBB-4275-8481-B51A39175C71}
 		{E8F1FF92-594B-47E9-8C3C-33FDBE620430} = {1FF66289-CBBB-4275-8481-B51A39175C71}
+		{C5C9A8FF-8105-4E52-858E-0A38D70E3E06} = {BED00B05-8349-44B5-A57C-E2969980B17E}
+		{03988845-F2E7-45EF-B3ED-3C3AAA8AFFFD} = {C5C9A8FF-8105-4E52-858E-0A38D70E3E06}
+		{1464414A-5FE3-4892-A75D-38A1E0D97EFA} = {C5C9A8FF-8105-4E52-858E-0A38D70E3E06}
+		{9CB9621F-9187-4AC8-9A30-2BAC33FE3575} = {2D7D8864-DCC3-428B-9225-B011D7261414}
+		{500CF3FC-7B06-4FD5-B201-92D9CB76D5A5} = {9CB9621F-9187-4AC8-9A30-2BAC33FE3575}
+		{299E7AE8-3210-4762-84B5-3A4689ABEF8F} = {9CB9621F-9187-4AC8-9A30-2BAC33FE3575}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C36940F5-EDA8-4E02-A2C7-E638CB377922}

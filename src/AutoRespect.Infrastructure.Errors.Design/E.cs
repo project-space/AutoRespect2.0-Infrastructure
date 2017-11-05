@@ -1,11 +1,11 @@
-﻿namespace AutoRespect.Infrastructure.ErrorHandling
+﻿namespace AutoRespect.Infrastructure.Errors.Design
 {
-    public class Error
+    public class E
     {
         public string Id { get; set; }
         public string Description { get; set; }
 
-        public Error (string id, string description)
+        public E(string id, string description)
         {
             Id = id;
             Description = description;

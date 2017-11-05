@@ -9,9 +9,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\submodules\AutoRespect2.0-Shared\src\AutoRespect.Shared.Errors\AutoRespect.Shared.Errors.csproj" />
     <ProjectReference Include="..\AutoRespect.Infrastructure.Api.Design\AutoRespect.Infrastructure.Api.Design.csproj" />
     <ProjectReference Include="..\AutoRespect.Infrastructure.DI.Design\AutoRespect.Infrastructure.DI.Design.csproj" />
+    <ProjectReference Include="..\AutoRespect.Infrastructure.Errors\AutoRespect.Infrastructure.Errors.csproj" />
   </ItemGroup>
 
 </Project>

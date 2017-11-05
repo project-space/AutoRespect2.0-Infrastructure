@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using AutoRespect.Shared.Errors.Design;
+using AutoRespect.Infrastructure.Errors.Design;
 
 namespace AutoRespect.Infrastructure.Api.Design
 {

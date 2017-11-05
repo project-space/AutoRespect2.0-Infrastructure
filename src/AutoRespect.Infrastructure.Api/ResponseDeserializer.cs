@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using AutoRespect.Infrastructure.Api.Design;
 using AutoRespect.Infrastructure.DI.Design;
 using AutoRespect.Infrastructure.DI.Design.Attributes;
-using AutoRespect.Shared.Errors.DataTransfer;
-using AutoRespect.Shared.Errors.Design;
+using AutoRespect.Infrastructure.Errors.DataTransfer;
+using AutoRespect.Infrastructure.Errors.Design;
 using Newtonsoft.Json;
 
 namespace AutoRespect.Infrastructure.Api
@@ -26,7 +26,7 @@ namespace AutoRespect.Infrastructure.Api
             }
             else if (statusCode >= HttpStatusCode.BadRequest && statusCode < HttpStatusCode.InternalServerError)
             {
-                return JsonConvert.DeserializeObject<List<Error>>(content);
+                return JsonConvert.DeserializeObject<List<E>>(content);
             }
             else if (statusCode >= HttpStatusCode.InternalServerError)
             {

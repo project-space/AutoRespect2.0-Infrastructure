@@ -4,32 +4,33 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using AutoRespect.Infrastructure.DI.Design;
 using AutoRespect.Infrastructure.DI.Design.Attributes;
-using AutoRespect.Shared.Errors.Design;
 using Microsoft.IdentityModel.Tokens;
 
 namespace AutoRespect.Infrastructure.OAuth.Jwt
 {
     public interface IJwtIssuer
     {
-        R<string> Release(JwtPayload payload);
+        string Release(JwtPayload payload);
     }
 
     [DI(LifeCycle.Singleton)]
     public class JwtIssuer : IJwtIssuer
     {
-        public R<string> Release(JwtPayload payload)
+        public string Release(JwtPayload payload)
         {
             var identity = CreateClaims(payload);
-
-            var jwt = new JwtSecurityToken(
+            var jwt      = new JwtSecurityToken(
                 issuer: Options.Issuer,
                 audience: Options.Audience,
                 notBefore: DateTime.UtcNow,
                 expires: DateTime.UtcNow.Add(Options.LifeTime),
                 claims: identity.Claims,
-                signingCredentials: new SigningCredentials(Options.SecretKey, SecurityAlgorithms.HmacSha256));
+                signingCredentials: new SigningCredentials(Options.SecretKey, SecurityAlgorithms.HmacSha256)
+            );
 
-            var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var encodedJwt   = tokenHandler.WriteToken(jwt);
+
             return encodedJwt;
         }
 

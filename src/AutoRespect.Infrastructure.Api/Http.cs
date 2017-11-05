@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using AutoRespect.Infrastructure.Api.Design;
 using AutoRespect.Infrastructure.DI.Design;
 using AutoRespect.Infrastructure.DI.Design.Attributes;
-using AutoRespect.Shared.Errors.Design;
+using AutoRespect.Infrastructure.Errors.Design;
 using Newtonsoft.Json;
 
 namespace AutoRespect.Infrastructure.Api

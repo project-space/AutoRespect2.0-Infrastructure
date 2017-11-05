@@ -12,7 +12,7 @@ namespace AutoRespect.Infrastructure.ServiceDiscovery.Db
     [DI(LifeCycle.Singleton)]
     public class DbConnectionStringGetter : IDbConnectionStringGetter
     {
-        private static readonly ConsulClient _consulClient = new ConsulClient((config) =>
+        private static readonly ConsulClient consulClient = new ConsulClient((config) =>
         {
             config.Address = new Uri("http://127.0.0.1:8500");
         });
@@ -20,7 +20,7 @@ namespace AutoRespect.Infrastructure.ServiceDiscovery.Db
         public async Task<string> Get(DbType db)
         {
             var serviceName = DbTypeToServiceName(db);
-            var services = await _consulClient.Catalog.Service(serviceName);
+            var services = await consulClient.Catalog.Service(serviceName);
 
             if (services.StatusCode == HttpStatusCode.OK)
             {
@@ -42,7 +42,7 @@ namespace AutoRespect.Infrastructure.ServiceDiscovery.Db
                 case DbType.ResourceServer:
                     return "db-resource-server";
                 default:
-                    throw new Exception("UNSUPPORTED DBTYPE");
+                    throw new Exception($"Unsupported database type {db}");
             }
         }
     }

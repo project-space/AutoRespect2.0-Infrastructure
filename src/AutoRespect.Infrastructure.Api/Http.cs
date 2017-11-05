@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using AutoRespect.Infrastructure.Api.Design;
 using AutoRespect.Infrastructure.DI.Design;
@@ -40,7 +41,7 @@ namespace AutoRespect.Infrastructure.Api
             {
                 var serializedBody = JsonConvert.SerializeObject(body);
 
-                request.Content = new StringContent(serializedBody);
+                request.Content = new StringContent(serializedBody, Encoding.UTF8, "application/json");
 
                 var response     = await requestSender.Send(request);
                 var deserialized = await responseDeserializer.Deserialize<TResponse>(response);

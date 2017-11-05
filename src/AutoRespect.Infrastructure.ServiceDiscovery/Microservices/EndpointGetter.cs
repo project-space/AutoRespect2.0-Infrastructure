@@ -26,7 +26,9 @@ namespace AutoRespect.Infrastructure.ServiceDiscovery.Microservices
             {
                 if (services.Response.Length > 0)
                 {
-                    return services.Response.First().ServiceAddress;
+                    var service = services.Response.First();
+
+                    return $"{service.ServiceAddress}{service.ServicePort}";
                 }
             }
 

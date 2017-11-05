@@ -37,8 +37,8 @@ namespace AutoRespect.Infrastructure.ServiceDiscovery.Microservices
         {
             switch (microservice)
             {
-                case MicroserviceType.AuthorizationServer:
-                    return "ms-authorization-server";
+                case MicroserviceType.IdentityServer:
+                    return "ms-identity-server";
                 case MicroserviceType.ResourceServer:
                     return "ms-resource-server";
                 default:

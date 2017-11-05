@@ -2,7 +2,7 @@
 {
     public enum MicroserviceType
     {
-        AuthorizationServer,
+        IdentityServer,
         ResourceServer
     }
 }

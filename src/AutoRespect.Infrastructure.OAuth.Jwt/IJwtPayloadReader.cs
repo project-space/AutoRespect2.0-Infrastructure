@@ -17,10 +17,11 @@ namespace AutoRespect.Infrastructure.OAuth.Jwt
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var payload      = tokenHandler.ReadJwtToken(token);
-
+            
             return new JwtPayload
             {
-                AccountId = Convert.ToInt32(payload.Payload["AccountId"])
+                AccountId    = Convert.ToInt32(payload.Payload["AccountId"]),
+                AccountLogin = Convert.ToString(payload.Payload["AccountLogin"])
             };
         }
     }

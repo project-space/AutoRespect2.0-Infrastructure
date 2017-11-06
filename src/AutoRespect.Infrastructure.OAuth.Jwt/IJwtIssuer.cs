@@ -10,15 +10,15 @@ namespace AutoRespect.Infrastructure.OAuth.Jwt
 {
     public interface IJwtIssuer
     {
-        string Release(JwtPayload payload);
+        string Release(JwtClaims claims);
     }
 
     [DI(LifeCycle.Singleton)]
     public class JwtIssuer : IJwtIssuer
     {
-        public string Release(JwtPayload payload)
+        public string Release(JwtClaims claims)
         {
-            var identity = CreateClaims(payload);
+            var identity = CreateIdentity(claims);
             var jwt      = new JwtSecurityToken(
                 issuer: Options.Issuer,
                 audience: Options.Audience,
@@ -34,15 +34,14 @@ namespace AutoRespect.Infrastructure.OAuth.Jwt
             return encodedJwt;
         }
 
-        private ClaimsIdentity CreateClaims(JwtPayload payload)
+        private ClaimsIdentity CreateIdentity(JwtClaims claims)
         {
-            var claims = new List<Claim>()
-            {
-                new Claim ("AccountId", payload.AccountId.ToString())
-            };
-
             return new ClaimsIdentity(
-                claims,
+                new List<Claim>
+                {
+                    new Claim ("AccountId", claims.AccountId.ToString()),
+                    new Claim (ClaimsIdentity.DefaultNameClaimType, claims.AccountLogin)
+                },
                 "Token",
                 ClaimsIdentity.DefaultNameClaimType,
                 ClaimsIdentity.DefaultRoleClaimType

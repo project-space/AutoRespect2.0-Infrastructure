@@ -35,9 +35,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRespect.Infrastructure.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "errors-handling", "errors-handling", "{4872DEF5-289B-47F3-B924-870FCA0CD7F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoRespect.Infrastructure.Errors.Design", "src\AutoRespect.Infrastructure.Errors.Design\AutoRespect.Infrastructure.Errors.Design.csproj", "{79533EDF-B4FD-46F5-8BC4-A2C6141696B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRespect.Infrastructure.Errors.Design", "src\AutoRespect.Infrastructure.Errors.Design\AutoRespect.Infrastructure.Errors.Design.csproj", "{79533EDF-B4FD-46F5-8BC4-A2C6141696B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoRespect.Infrastructure.Errors", "src\AutoRespect.Infrastructure.Errors\AutoRespect.Infrastructure.Errors.csproj", "{1330569D-C66B-45B3-B7B7-5A1181738D41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoRespect.Infrastructure.Errors", "src\AutoRespect.Infrastructure.Errors\AutoRespect.Infrastructure.Errors.csproj", "{1330569D-C66B-45B3-B7B7-5A1181738D41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoRespect.Infrastructure.OAuth", "src\AutoRespect.Infrastructure.OAuth\AutoRespect.Infrastructure.OAuth.csproj", "{D8B4A409-4686-4A8B-93ED-44A1AB34AAD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoRespect.Infrastructure.OAuth.Design", "src\AutoRespect.Infrastructure.OAuth.Design\AutoRespect.Infrastructure.OAuth.Design.csproj", "{13448F28-F71A-4E9B-ACE7-63F8153D4305}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +93,14 @@ Global
 		{1330569D-C66B-45B3-B7B7-5A1181738D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1330569D-C66B-45B3-B7B7-5A1181738D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1330569D-C66B-45B3-B7B7-5A1181738D41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8B4A409-4686-4A8B-93ED-44A1AB34AAD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8B4A409-4686-4A8B-93ED-44A1AB34AAD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8B4A409-4686-4A8B-93ED-44A1AB34AAD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8B4A409-4686-4A8B-93ED-44A1AB34AAD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13448F28-F71A-4E9B-ACE7-63F8153D4305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13448F28-F71A-4E9B-ACE7-63F8153D4305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13448F28-F71A-4E9B-ACE7-63F8153D4305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13448F28-F71A-4E9B-ACE7-63F8153D4305}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,6 +123,8 @@ Global
 		{4872DEF5-289B-47F3-B924-870FCA0CD7F7} = {BED00B05-8349-44B5-A57C-E2969980B17E}
 		{79533EDF-B4FD-46F5-8BC4-A2C6141696B5} = {4872DEF5-289B-47F3-B924-870FCA0CD7F7}
 		{1330569D-C66B-45B3-B7B7-5A1181738D41} = {4872DEF5-289B-47F3-B924-870FCA0CD7F7}
+		{D8B4A409-4686-4A8B-93ED-44A1AB34AAD5} = {DF83A591-438F-4076-8710-5292E67DE3AA}
+		{13448F28-F71A-4E9B-ACE7-63F8153D4305} = {DF83A591-438F-4076-8710-5292E67DE3AA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C36940F5-EDA8-4E02-A2C7-E638CB377922}

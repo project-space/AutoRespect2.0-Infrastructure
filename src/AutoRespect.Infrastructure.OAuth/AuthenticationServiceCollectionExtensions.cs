@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using AutoRespect.Infrastructure.OAuth.Jwt;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -20,9 +21,12 @@ namespace AutoRespect.Infrastructure.OAuth
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuer = true,
-                        ValidIssuer    = "AutoRespect.AuthorizationServer",
+                        ValidIssuer    = JwtOptions.Issuer,
 
-                        ValidateLifetime = true
+                        ValidateLifetime = true,
+
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = JwtOptions.SecretKey
                     };
                 });
         }

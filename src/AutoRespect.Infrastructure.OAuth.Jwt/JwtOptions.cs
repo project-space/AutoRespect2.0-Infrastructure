@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AutoRespect.Infrastructure.OAuth.Jwt
 {
-    public static class Options
+    public static class JwtOptions
     {
         public static string Issuer = "AutoRespect.AuthorizationServer";
         public static string Audience = "AutoRespect Projects";

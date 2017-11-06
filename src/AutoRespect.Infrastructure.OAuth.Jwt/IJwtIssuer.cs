@@ -20,12 +20,12 @@ namespace AutoRespect.Infrastructure.OAuth.Jwt
         {
             var identity = CreateIdentity(claims);
             var jwt      = new JwtSecurityToken(
-                issuer: Options.Issuer,
-                audience: Options.Audience,
+                issuer: JwtOptions.Issuer,
+                audience: JwtOptions.Audience,
                 notBefore: DateTime.UtcNow,
-                expires: DateTime.UtcNow.Add(Options.LifeTime),
+                expires: DateTime.UtcNow.Add(JwtOptions.LifeTime),
                 claims: identity.Claims,
-                signingCredentials: new SigningCredentials(Options.SecretKey, SecurityAlgorithms.HmacSha256)
+                signingCredentials: new SigningCredentials(JwtOptions.SecretKey, SecurityAlgorithms.HmacSha256)
             );
 
             var tokenHandler = new JwtSecurityTokenHandler();

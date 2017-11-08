@@ -26,7 +26,7 @@ namespace AutoRespect.Infrastructure.OAuth
 
         private string GetClaim(string name)
         {
-            var claim = httpContext.User.Claims.FirstOrDefault(c => c.ValueType.Equals(name, StringComparison.OrdinalIgnoreCase));
+            var claim = httpContext.User.Claims.FirstOrDefault(c => c.Type.Equals(name, StringComparison.OrdinalIgnoreCase));
             if (claim != null)
             {
                 return claim.Value;

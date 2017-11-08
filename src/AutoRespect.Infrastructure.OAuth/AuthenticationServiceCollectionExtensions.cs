@@ -21,12 +21,13 @@ namespace AutoRespect.Infrastructure.OAuth
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuer = true,
-                        ValidIssuer    = JwtOptions.Issuer,
-
-                        ValidateLifetime = true,
-
+                        ValidateAudience = true,
                         ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = JwtOptions.SecretKey
+                        ValidIssuer = JwtOptions.Issuer,
+                        ValidAudience = JwtOptions.Audience,
+                        IssuerSigningKey = JwtOptions.SecretKey,
+                        ValidateLifetime = true
+
                     };
                 });
         }

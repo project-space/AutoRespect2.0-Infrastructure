@@ -4,8 +4,9 @@ namespace AutoRespect.Infrastructure.OAuth
 {
     public static class AuthenticationApplicationBuilderExtensions
     {
-        public static IApplicationBuilder UseAutoRespectJwtAuthentication(this IApplicationBuilder applicationBuilder) => 
+        public static IApplicationBuilder UseAutoRespectJwtAuthentication(this IApplicationBuilder applicationBuilder) =>
             applicationBuilder
+                .UseMiddleware<AuthorizationHeaderFromCookiesProvider>()
                 .UseAuthentication();
     }
 }

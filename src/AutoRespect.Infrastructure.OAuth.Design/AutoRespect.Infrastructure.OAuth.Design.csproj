@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Compile Remove="ClaimsIdentityPartial.cs" />
+    <Compile Remove="IAuthManager.cs" />
   </ItemGroup>
 
 </Project>
